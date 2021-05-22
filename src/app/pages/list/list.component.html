@@ -1,0 +1,11 @@
+<div class="container">
+  <app-slider>
+    <app-slide *ngFor="let movie of movies; trackBy: trackBy">
+      <img image [src]="movie.cover_url" [alt]="movie.name">
+      <h3 name>{{movie.name}} ({{movie.year}})</h3>
+      <span director>by {{movie.director}}</span>
+      <p description>{{movie.description | maxLength: 200}}</p>
+      <span gender>{{movie.gender}}</span>
+    </app-slide>
+  </app-slider>
+</div>
