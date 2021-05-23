@@ -3,10 +3,11 @@
   background-color: var(--light);
   width: 280px;
   min-width: 280px;
-  height: 620px;
+  height: 500px;
   border-radius: 8px;
   border: 2px solid var(--secondary);
   overflow: hidden;
+  cursor: pointer;
 
   &:hover {
     border: 2px solid var(--medium);
@@ -36,19 +37,17 @@
       white-space: normal;
     }
 
-    [director] {
-      padding: 0 16px;
-      color: var(--medium);
-    }
-
     [gender] {
       position: absolute;
-      bottom: 16px;
-      left: 0;
+      bottom: 12px;
+      left: 8px;
       color: var(--light);
-      padding: 8px 40px 8px 16px;
-      text-shadow: 1px 1px var(--dark);
-      background: linear-gradient(90deg, var(--medium) 0%, transparent 100%);
+      padding: 8px 16px 8px 16px;
+      text-shadow: 1px 1px var(--secondary);
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 25px;
+      font-size: 14px;
     }
 
   }

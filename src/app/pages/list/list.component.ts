@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 
 import { IMovie } from '../../interfaces/movie.interface';
 import { MoviesService } from '../../services/movies.service';
+import { MovieDetailsComponent } from '../../components/movie-details/movie-details.component';
 
 @Component({
   selector: 'app-list',
@@ -10,6 +11,8 @@ import { MoviesService } from '../../services/movies.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ListComponent implements OnInit {
+
+  @ViewChild(MovieDetailsComponent) detailsComponent: MovieDetailsComponent;
 
   public movies: IMovie[];
 
@@ -30,6 +33,10 @@ export class ListComponent implements OnInit {
         },
         (error) => console.error(error),
         () => this._detectChanges())
+  }
+
+  public showDetails(movie: IMovie): void {
+    this.detailsComponent.open(movie);
   }
 
   public trackBy(index: number, item: IMovie): string {

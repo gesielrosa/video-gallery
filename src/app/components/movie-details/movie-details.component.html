@@ -1,0 +1,26 @@
+<ng-container *ngIf="show">
+  <div class="backdrop" @fadeIn></div>
+  <div class="wrapper" @fadeIn>
+    <div class="container">
+      <div class="close" (click)="close()">×</div>
+      <img [src]="movie.cover_url" [alt]="movie.name">
+      <h3>{{movie.name}}</h3>
+      <div class="details">
+        <div>
+          <label>Director:</label>
+          <p>{{movie.director}}</p>
+        </div>
+        <div>
+          <label>Gender:</label>
+          <p>{{movie.gender}}</p>
+        </div>
+        <div>
+          <label>Year:</label>
+          <p>{{movie.year}}</p>
+        </div>
+      </div>
+      <label>Overview:</label>
+      <p>{{movie.description}}</p>
+    </div>
+  </div>
+</ng-container>
