@@ -1,6 +1,6 @@
 # Video Gallery
 
-###[Demo](https://gesielrosa.github.io/video-gallery/)
+### [Demo](https://gesielrosa.github.io/video-gallery/)
 
 ## Dev server
 
