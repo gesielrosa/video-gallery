@@ -1,10 +1,11 @@
 {
-  "name": "video-store",
+  "name": "video-gallery",
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --base-href=https://gesielrosa.github.io/video-gallery/",
+    "deploy": "ngh --branch=page",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
